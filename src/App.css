@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button.ebu{
+  float: right;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    border: 2px;
+    background-color: red;
+    padding: 3px 7px;
+    border-radius: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.display{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+    place-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+.display button{
+  padding: 5px 7px;
+    border-radius: 5px;
+    border: 1.5px solid transparent;
+    background-color: #2bcdce;
+    margin-left: 1rem;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+.display button::before{
+  background-color: transparent;
+  content: '';
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+}
+.display button:hover::before{
+  background-color: aqua;
+  left: 0%;
+  z-index: -1;
+  border-radius: 5px;
+}
+.answer button{
+  padding: 2px 5px;
+    margin: 2px;
+    background-color: #81e6bb;
+    color: black;
+    border-radius: 5px;
+    border: 2px solid #3bd23b;
+}
+.score{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  place-items: center;
+  flex-direction: column;
+  height: 50vh;
 }
-
-.App-link {
-  color: #61dafb;
+.score h3{
+  color: red;
+  font-family: sans-serif;
+  font-weight: 700;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score .bu button{
+  padding: 4px 7px;
+    border: 2px solid deepskyblue;
+    background-color: deepskyblue;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
 }
